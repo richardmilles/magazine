@@ -1,0 +1,328 @@
+/**
+ * Styles personnalisés pour L'Étudiant
+ * Design moderne et responsive
+ */
+
+/* Variables CSS */
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --success-color: #198754;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #0dcaf0;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+    --shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    --shadow-hover: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* Styles généraux */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+}
+
+/* Header */
+.bg-primary {
+    background: linear-gradient(135deg, var(--primary-color), #0056b3) !important;
+}
+
+/* Navigation */
+.navbar {
+    box-shadow: var(--shadow);
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--primary-color) !important;
+    transform: translateY(-2px);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--primary-color) !important;
+    font-weight: 600;
+}
+
+.navbar-nav .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 30px;
+    height: 3px;
+    background: var(--primary-color);
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* Cards d'articles */
+.article-card {
+    transition: all 0.3s ease;
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--primary-color);
+}
+
+.article-card .card-img-top {
+    transition: transform 0.3s ease;
+}
+
+.article-card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--dark-color);
+}
+
+.card-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Badges */
+.badge {
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.25rem;
+}
+
+/* Boutons */
+.btn {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Alertes */
+.alert {
+    border-radius: 0.5rem;
+    border: none;
+    box-shadow: var(--shadow);
+}
+
+.alert-info {
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    color: #0277bd;
+}
+
+.alert-info .fas {
+    color: #0288d1;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: var(--secondary-color);
+}
+
+.breadcrumb-item.active {
+    color: var(--dark-color);
+    font-weight: 500;
+}
+
+/* Modal */
+.modal-content {
+    border-radius: 0.5rem;
+    border: none;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+}
+
+.modal-header {
+    background: linear-gradient(135deg, var(--light-color), #e9ecef);
+    border-bottom: 1px solid #dee2e6;
+}
+
+.modal-title {
+    color: var(--dark-color);
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, var(--dark-color), #343a40) !important;
+}
+
+.social-links a {
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar-nav .nav-link {
+        padding: 0.5rem 1rem;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .article-card:hover {
+        transform: none;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.article-card {
+    animation: fadeIn 0.6s ease;
+}
+
+/* États de chargement */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Utilitaires */
+.text-muted {
+    color: var(--secondary-color) !important;
+}
+
+.shadow-sm {
+    box-shadow: var(--shadow) !important;
+}
+
+/* Styles pour les icônes */
+.fas, .fab {
+    margin-right: 0.25rem;
+}
+
+/* Amélioration de la lisibilité */
+p {
+    margin-bottom: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+/* Styles pour les états vides */
+.empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--secondary-color);
+}
+
+.empty-state .fas {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--info-color);
+}
+
+/* Styles pour la page de détail d'article */
+.article-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--dark-color);
+}
+
+.article-content p {
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.article-content p:first-child::first-letter {
+    font-size: 3.5rem;
+    font-weight: bold;
+    float: left;
+    line-height: 1;
+    margin: 0.1rem 0.5rem 0 0;
+    color: var(--primary-color);
+}
+
+/* Styles pour l'impression */
+@media print {
+    .navbar, .breadcrumb, .btn, footer {
+        display: none !important;
+    }
+    
+    .article-content {
+        font-size: 12pt;
+        line-height: 1.6;
+    }
+    
+    .container {
+        max-width: none !important;
+        padding: 0 !important;
+    }
+}
+
+/* Responsive pour la page de détail */
+@media (max-width: 768px) {
+    .article-content p:first-child::first-letter {
+        font-size: 2.5rem;
+        margin: 0.05rem 0.3rem 0 0;
+    }
+    
+    .display-5 {
+        font-size: 2rem !important;
+    }
+}
