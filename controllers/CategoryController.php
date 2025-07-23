@@ -4,7 +4,7 @@
  * Gestion de la logique métier des catégories
  */
 
-require_once 'models/Category.php';
+require_once 'models/Category.php';   
 
 class CategoryController {
     private $categoryModel;
@@ -88,4 +88,4 @@ class CategoryController {
         }
     }
 }
-?>
+?>    

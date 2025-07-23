@@ -68,7 +68,7 @@ class Category {
         
         return $stmt->execute();
     }
-    
+        
     /**
      * Compter les articles par catégorie
      * @param int $category_id
@@ -84,4 +84,4 @@ class Category {
         return $result['count'];
     }
 }
-?>
+?>                     

@@ -3,7 +3,7 @@
  * Vue d'affichage des articles
  * Affiche la liste des articles sous forme de cards responsive
  */
-?>
+?>       
 
 <div class="row">
     <?php if (!empty($articles)): ?>
