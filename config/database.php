@@ -6,10 +6,10 @@
 
 class Database {
     private $host = '127.0.0.1';
-    private $port = '3307'; // Port MySQL par défaut
+    private $port = '3307'; 
     private $dbname = 'letudiant_db';
     private $username = 'root';
-    private $password = ''; // Pas de mot de passe pour WAMP par défaut
+    private $password = ''; 
     private $connection;
     
     /**
@@ -19,7 +19,7 @@ class Database {
     public function getConnection() {
         $this->connection = null;
         
-        // Pas de mot de passe nécessaire pour WAMP par défaut
+       
         
         try {
             $this->connection = new PDO(
